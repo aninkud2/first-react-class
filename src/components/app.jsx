@@ -9,18 +9,19 @@ import contact from "../contact"
 
  const App=()=>{
     return<div>
-     <Header />
-     <Note/>
     
-     <h3>my contact list</h3>
-     
-{contact.map((contact)=>{
+    
+     <h3 className="heading">my contact list</h3>
+
+{contact.map(pro=>{
 
     return <Contact
-    name={contact.name}
-    img={contact.imgURL}
-    tel={contact.phone}
-    email={contact.email}
+    key={pro.id}
+    id={pro.id}
+    name={pro.name}
+    img={pro.imgURL}
+    tel={pro.phone}
+    email={pro.email}
     />
 })}
      
